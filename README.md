@@ -1,15 +1,16 @@
-# FinalProject — Unity Işık ve Gölge Simülasyonu
+# Final Project
 
-Bu proje, gerçek zamanlı ışık konumuna bağlı olarak bir karakterin zemindeki gölgesinin yönünü ve uzunluğunu gösteren Unity bitirme projesidir.
+Bu depo, Unity ile geliştirilmekte olan bitirme oyunu projesini içerir. Proje henüz başlangıç ve prototipleme aşamasındadır; kapsamı geliştirme sürecinde genişleyecektir.
 
-## Özellikler
+## Mevcut prototip
 
-- Parçalardan oluşturulmuş örnek 3B karakter
-- Gölge alan geniş zemin
+- Basit bir 3B karakter ve test zemini
 - Taşınabilir gerçek zamanlı Point Light
-- Işık hareket ettikçe değişen yumuşak gölge
-- Hazır kamera ve dolgu ışığı
+- Işık hareketine göre yönü ve uzunluğu değişen dinamik gölge
+- Test kamerası ve dolgu ışığı
 - AI destekli Unity geliştirme için MCP for Unity entegrasyonu
+
+Bu sahne oyunun nihai yapısını temsil etmez; mekanik ve görsel denemeler için hazırlanan ilk prototiptir.
 
 ## Gereksinimler
 
@@ -22,7 +23,7 @@ Bu proje, gerçek zamanlı ışık konumuna bağlı olarak bir karakterin zemind
 1. Repoyu klonlayın.
 2. Unity Hub üzerinden **Add project from disk** seçeneğiyle klasörü ekleyin.
 3. Projeyi Unity ile açın ve paketlerin indirilmesini bekleyin.
-4. `Assets/Scenes/ShadowDemo.unity` sahnesini açın.
+4. İlk prototipi görmek için `Assets/Scenes/ShadowDemo.unity` sahnesini açın.
 5. Hierarchy içinden `Move_Me_PointLight` nesnesini seçip taşıyın.
 
 Işığın karaktere göre konumu değiştikçe gölge gerçek zamanlı olarak yön ve uzunluk değiştirir.
