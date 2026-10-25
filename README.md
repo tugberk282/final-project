@@ -6,7 +6,8 @@ Bu depo, Unity ile geliştirilmekte olan bitirme oyunu projesini içerir. Proje 
 
 - Basit bir 3B karakter ve test zemini
 - Taşınabilir gerçek zamanlı Point Light
-- Işık hareketine göre yönü ve uzunluğu değişen dinamik gölge
+- Görünen oyuncudan bağımsız, yalnızca gölgesi görünen ikinci bir karakter
+- Işık hareketine göre yönü ve uzunluğu değişen dinamik gölge mekaniği
 - Test kamerası ve dolgu ışığı
 - AI destekli Unity geliştirme için MCP for Unity entegrasyonu
 
@@ -26,7 +27,7 @@ Bu sahne oyunun nihai yapısını temsil etmez; mekanik ve görsel denemeler iç
 4. İlk prototipi görmek için `Assets/Scenes/ShadowDemo.unity` sahnesini açın.
 5. Hierarchy içinden `Move_Me_PointLight` nesnesini seçip taşıyın.
 
-Işığın karaktere göre konumu değiştikçe gölge gerçek zamanlı olarak yön ve uzunluk değiştirir.
+Görünen oyuncu karakteri gölge üretmez. `InvisibleShadowCharacter` sahnede görünmeden yalnızca gölge üretir; ışığın konumu değiştikçe bu bağımsız gölge gerçek zamanlı olarak yön ve uzunluk değiştirir.
 
 ## MCP for Unity
 
