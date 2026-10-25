@@ -3213,7 +3213,27 @@ PrefabInstance:
     - target: {fileID: -3238115599172791193, guid: 3294b2be4b2fa114b8a5a91752e356bc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 554368deb93a9d4448cba74e7142a7f6, type: 2}
+      objectReference: {fileID: 2100000, guid: 90336975f4b3d69419785112b4b5a29c, type: 2}
+    - target: {fileID: -3238115599172791193, guid: 3294b2be4b2fa114b8a5a91752e356bc, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1801cf4dcb8a3b3488cd902692363643, type: 2}
+    - target: {fileID: -3238115599172791193, guid: 3294b2be4b2fa114b8a5a91752e356bc, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c2a3c5655f1a6240a065135b5bbfb2b, type: 2}
+    - target: {fileID: -3238115599172791193, guid: 3294b2be4b2fa114b8a5a91752e356bc, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 926dc9444f049e54cb363790193b23a3, type: 2}
+    - target: {fileID: -3238115599172791193, guid: 3294b2be4b2fa114b8a5a91752e356bc, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9471edd295099cd4d846cfa627b57537, type: 2}
+    - target: {fileID: -3238115599172791193, guid: 3294b2be4b2fa114b8a5a91752e356bc, type: 3}
+      propertyPath: 'm_Materials.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f358266c6c067294c89d494a2a77a161, type: 2}
     - target: {fileID: 919132149155446097, guid: 3294b2be4b2fa114b8a5a91752e356bc, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter_Fab
@@ -3247,6 +3267,7 @@ MonoBehaviour:
   walkFrequency: 7.5
   walkAngle: 28
   xLimits: {x: -10.5, y: 10.5}
+  zLimits: {x: -9.5, y: 9.5}
 --- !u!21 &2103233598
 Material:
   serializedVersion: 8

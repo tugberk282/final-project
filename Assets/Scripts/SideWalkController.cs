@@ -7,6 +7,7 @@ public sealed class SideWalkController : MonoBehaviour
     [SerializeField] private float walkFrequency = 7.5f;
     [SerializeField] private float walkAngle = 28f;
     [SerializeField] private Vector2 xLimits = new(-10.5f, 10.5f);
+    [SerializeField] private Vector2 zLimits = new(-9.5f, 9.5f);
 
     private readonly Dictionary<Transform, Quaternion> restRotations = new();
     private Transform leftThigh;
@@ -34,14 +35,17 @@ public sealed class SideWalkController : MonoBehaviour
 
     private void Update()
     {
-        float input = Input.GetAxisRaw("Horizontal");
+        Vector3 input = new(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        input = Vector3.ClampMagnitude(input, 1f);
         Vector3 position = transform.position;
-        position.x = Mathf.Clamp(position.x + input * moveSpeed * Time.deltaTime, xLimits.x, xLimits.y);
+        position += input * moveSpeed * Time.deltaTime;
+        position.x = Mathf.Clamp(position.x, xLimits.x, xLimits.y);
+        position.z = Mathf.Clamp(position.z, zLimits.x, zLimits.y);
         transform.position = position;
 
-        if (Mathf.Abs(input) > 0.01f)
+        if (input.sqrMagnitude > 0.01f)
         {
-            transform.rotation = Quaternion.Euler(0f, input > 0f ? 90f : -90f, 0f);
+            transform.rotation = Quaternion.LookRotation(input, Vector3.up);
             walkTime += Time.deltaTime * walkFrequency;
             AnimateWalk(Mathf.Sin(walkTime));
         }
